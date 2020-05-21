@@ -9,6 +9,7 @@
 int main() {
     //Create a socket
     int network_socket;
-    network_socket = socket(AF_INET, )
+    network_socket = socket(AF_INET, SOCK_STREAM, 0);
+    
     return 0;
 }
