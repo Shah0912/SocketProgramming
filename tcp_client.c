@@ -28,6 +28,10 @@ int main() {
     char server_response[256];
     recv(network_socket, &server_response, sizeof(server_response), 0);
 
-    
+    // Print data
+    printf("The server sent the data &s", server_response);
+
+    //Close the socket
+    close(network_socket);
     return 0;
 }
