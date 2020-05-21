@@ -26,10 +26,13 @@ int main() {
 
     // Recieve data from the server
     char server_response[256];
-    recv(network_socket, &server_response, sizeof(server_response), 0);
-
+    int r = recv(network_socket, &server_response, sizeof(server_response), 0);
+    if(r<0) {
+        printf("Error with receive");
+        return 0;
+    }
     // Print data
-    printf("The server sent the data: \n %s", server_response);
+    printf("\nThe server sent the data: \n %s", server_response);
 
     //Close the socket
     // close(network_socket);

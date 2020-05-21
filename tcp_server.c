@@ -9,7 +9,8 @@
 int main() {
 
     char server_message[256] = "You have reached the server";
-
+    printf("%s\n", server_message);
+    
     //Create server socket
     int server_socket;
     server_socket = socket(AF_INET, SOCK_STREAM, 0);
