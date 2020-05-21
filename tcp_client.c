@@ -22,16 +22,16 @@ int main() {
     
     //Check for error
     if(connnection_status == -1 )
-        printf("there is an error making a connection to the remote socket");
+        printf("there is an error making a connection to the remote socket \n");
 
     // Recieve data from the server
     char server_response[256];
     recv(network_socket, &server_response, sizeof(server_response), 0);
 
     // Print data
-    printf("The server sent the data &s", server_response);
+    printf("The server sent the data: \n %s", server_response);
 
     //Close the socket
-    close(network_socket);
+    // close(network_socket);
     return 0;
 }
